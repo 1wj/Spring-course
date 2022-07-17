@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--School模块的bean声明，school模块的配置文件-->
+
+
+    <!--声明school对象-->
+    <bean id="school" class="cn.bj.ba06.School">
+        <property name="address" value="航空大dd学"/>
+        <property name="name" value="北京的海赋给淀区"/>
+    </bean>
+
+</beans>

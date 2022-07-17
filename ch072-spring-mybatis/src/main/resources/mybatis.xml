@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--控制mybatis全局行为-->
+    <settings>
+        <!--设置mybatis输出日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--别名-->
+ <typeAliases>
+     <!--实体类所在的包名-->
+     <package name="org.example.domain"/>
+ </typeAliases>
+
+
+
+    <!-- sql mapper (sql 映射文件) 的位置-->
+    <mappers>
+        <!--一个mapper 标签指定一个文件的位置
+        可以有多个mapper标签
+            从类路径开始的路径信息 target/class（类路径）
+            有几个映射文件就的出现几次
+        -->
+<!--        <mapper resource="org/example/dao/StudentDao.xml"/>这个是对的-->
+<!--        .<mapper resource="org.example.dao.StudentDao.xml"/> 不行是错的-->
+        <!-- name 是包名，这个包中的所有的mapper.xml一次都能加载-->
+        <package name="org.example.dao"/>
+    </mappers>
+</configuration>
+        <!--
+    mybaties的主要配置文件：主要定义了数据库的配置信息，sql映射文件的位置
+    1.约束文件
+        <!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+        mybatis-3-config.dtd 约束文件的名称
+    2.configuration 根标签
+mapper是映射的意思
+-->

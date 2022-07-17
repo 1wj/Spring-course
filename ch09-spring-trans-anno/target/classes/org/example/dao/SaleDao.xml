@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.dao.SaleDao">
+
+    <!--代码片段 就是复用一些 语法  id 自定义命名 但得是 唯一 的值-->
+    <sql id="stuid">
+        select name, id, email
+    </sql>
+    <!-- <include refid="stuid"/>-->
+
+    <insert id="insertSale" >
+        insert into sale(gid,nums) value (#{gid},#{nums})
+    </insert>
+
+</mapper>

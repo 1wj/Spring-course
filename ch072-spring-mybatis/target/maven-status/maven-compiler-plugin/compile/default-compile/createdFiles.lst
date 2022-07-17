@@ -1,0 +1,4 @@
+org\example\domain\Student.class
+org\example\service\StudentService.class
+org\example\service\impl\StudentServiceImpl.class
+org\example\dao\StudentDao.class
